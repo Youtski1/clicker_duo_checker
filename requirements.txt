@@ -1,0 +1,4 @@
+aiohttp==3.12.14
+dotenv==0.9.9
+aiogram==3.21.0
+schedule==1.2.2
