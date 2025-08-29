@@ -42,7 +42,7 @@ async def main():
             
             logger.info(f"{duo.recovery_time} {datetime.now()}")
             
-            if datetime.strptime(duo.recovery_time, '%Y-%m-%d %H:%M:%S') < datetime.now():
+            if datetime.strptime(duo.recovery_time, '%Y-%m-%d %H:%M:%S'):
                 status_query = await database_service.full_recovery_duo(owner_id=duo.owner_id)
                 
                 if status_query == 200:
